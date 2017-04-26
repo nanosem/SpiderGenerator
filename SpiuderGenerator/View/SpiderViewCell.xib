@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SpiderViewCell" id="c1M-ZJ-pYZ" customClass="SpiderViewCell" customModule="SpiuderGenerator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="357" height="314"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="357" height="314"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gnz-VG-hgE" userLabel="WrapperView">
+                        <rect key="frame" x="0.0" y="0.0" width="357" height="314"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spider.png" translatesAutoresizingMaskIntoConstraints="NO" id="fvr-q8-5zy">
+                                <rect key="frame" x="0.0" y="0.0" width="357" height="314"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="fvr-q8-5zy" firstAttribute="leading" secondItem="Gnz-VG-hgE" secondAttribute="leading" id="Hey-sP-VyV"/>
+                            <constraint firstAttribute="trailing" secondItem="fvr-q8-5zy" secondAttribute="trailing" id="Rua-Cf-NE5"/>
+                            <constraint firstAttribute="bottom" secondItem="fvr-q8-5zy" secondAttribute="bottom" id="WPb-Xv-hbT"/>
+                            <constraint firstItem="fvr-q8-5zy" firstAttribute="top" secondItem="Gnz-VG-hgE" secondAttribute="top" id="bZP-vF-jFx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Gnz-VG-hgE" secondAttribute="trailing" id="ANx-Mc-SI2"/>
+                <constraint firstItem="Gnz-VG-hgE" firstAttribute="leading" secondItem="c1M-ZJ-pYZ" secondAttribute="leading" id="HJG-1i-wp1"/>
+                <constraint firstItem="Gnz-VG-hgE" firstAttribute="top" secondItem="c1M-ZJ-pYZ" secondAttribute="top" id="i0j-7S-qXf"/>
+                <constraint firstAttribute="bottom" secondItem="Gnz-VG-hgE" secondAttribute="bottom" id="tsd-EL-THs"/>
+            </constraints>
+            <size key="customSize" width="357" height="314"/>
+            <connections>
+                <outlet property="spiderImageView" destination="fvr-q8-5zy" id="tFo-qs-h6N"/>
+            </connections>
+            <point key="canvasLocation" x="-291.5" y="79"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="spider.png" width="533" height="533"/>
+    </resources>
+</document>
