@@ -141,13 +141,6 @@ class MainViewController: UIViewController {
         
         settingsButton.frame = CGRect(x: x, y: y, width: width, height: height)
     }
-    
-    // TODO: Need to refactor
-    private func move(view: UIView, toPosition pos: (x: Int, y: Int)) {
-        UIView.animate(withDuration: 2, delay: 0, options: [.curveLinear], animations: {
-            view.frame = CGRect(x: pos.x, y: pos.y, width: 32, height: 32)
-        }, completion: nil)
-    }
 
     
     // MARK: - Selector methods

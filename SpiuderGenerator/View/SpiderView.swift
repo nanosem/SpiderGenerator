@@ -36,7 +36,7 @@ class SpiderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Private functions
+    // MARK: - Functions
     
      func shakeAnimation() {
         self.spiderImageView.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 6))
