@@ -16,6 +16,7 @@
 		C117AE901EAE595A00D6D79A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C117AE8F1EAE595A00D6D79A /* SettingsViewController.swift */; };
 		C117AE961EAE59F000D6D79A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C117AE951EAE59F000D6D79A /* Info.plist */; };
 		C17BD2791EB0AD3200C1DB5D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17BD2781EB0AD3200C1DB5D /* Utils.swift */; };
+		C17BD27B1EB0CBDF00C1DB5D /* SpiderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17BD27A1EB0CBDF00C1DB5D /* SpiderView.swift */; };
 		C199C2B71EAF3AC3002F62A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C199C2B51EAF3AC3002F62A7 /* LaunchScreen.storyboard */; };
 		C199C2B91EAF3AC9002F62A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C199C2B81EAF3AC9002F62A7 /* AppDelegate.swift */; };
 		C199C2BB1EAF3AD3002F62A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C199C2BA1EAF3AD3002F62A7 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		C117AE8F1EAE595A00D6D79A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C117AE951EAE59F000D6D79A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C17BD2781EB0AD3200C1DB5D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C17BD27A1EB0CBDF00C1DB5D /* SpiderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderView.swift; sourceTree = "<group>"; };
 		C199C2B61EAF3AC3002F62A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C199C2B81EAF3AC9002F62A7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C199C2BA1EAF3AD3002F62A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -123,8 +125,8 @@
 		C117AE881EAE58E600D6D79A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C199C2DA1EAFAAB8002F62A7 /* SpiderViewCell.swift */,
-				C199C2BD1EAF3CAA002F62A7 /* SpiderViewCell.xib */,
+				C17BD27D1EB0E3FB00C1DB5D /* Cells */,
+				C17BD27C1EB0E3E700C1DB5D /* Custom views */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,6 +137,23 @@
 				C17BD2781EB0AD3200C1DB5D /* Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		C17BD27C1EB0E3E700C1DB5D /* Custom views */ = {
+			isa = PBXGroup;
+			children = (
+				C17BD27A1EB0CBDF00C1DB5D /* SpiderView.swift */,
+			);
+			name = "Custom views";
+			sourceTree = "<group>";
+		};
+		C17BD27D1EB0E3FB00C1DB5D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C199C2DA1EAFAAB8002F62A7 /* SpiderViewCell.swift */,
+				C199C2BD1EAF3CAA002F62A7 /* SpiderViewCell.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		C199C2B01EAF3A8D002F62A7 /* Supporting Files */ = {
@@ -234,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C17BD27B1EB0CBDF00C1DB5D /* SpiderView.swift in Sources */,
 				C199C2D31EAF97B0002F62A7 /* DataManager.swift in Sources */,
 				C199C2B91EAF3AC9002F62A7 /* AppDelegate.swift in Sources */,
 				C117AE8E1EAE593C00D6D79A /* MainViewController.swift in Sources */,

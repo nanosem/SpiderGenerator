@@ -9,6 +9,9 @@
 import UIKit
 
 struct Spider {
+    private static var counter = 0
+    
+    let id: String
     let color: UIColor
     var position: (x: Int, y: Int)
     
@@ -17,10 +20,14 @@ struct Spider {
         
         self.position.x = position.x
         self.position.y = position.y
+        
+        self.id = "\(Spider.counter)"
+        Spider.counter += 1
     }
-    
-    mutating func move() {
-        self.position.x = 100
-        self.position.y = 100
+}
+
+extension Spider: Equatable{
+    static func == (lhs: Spider, rhs: Spider) -> Bool {
+        return lhs.id == rhs.id
     }
 }

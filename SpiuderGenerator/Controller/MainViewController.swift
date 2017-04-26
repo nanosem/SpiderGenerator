@@ -9,6 +9,14 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    private var spiders = [String: SpiderView]() {
+        didSet {
+            for spiderView in spiders.values {
+                spiderView.move(toPosition: Utils.randomPosition(forView: self.view))
+            }
+        }
+    }
+    
     
     // MARK: - Private view elements
     
@@ -58,8 +66,6 @@ class MainViewController: UIViewController {
         
         return buttonView
     }()
-    
-    private var spiders = [Spider]()
     
      // MARK: - Life cycle
 
@@ -128,10 +134,19 @@ class MainViewController: UIViewController {
         settingsButton.frame = CGRect(x: x, y: y, width: width, height: height)
     }
     
+    // TODO: Need to refactor
+    private func move(view: UIView, toPosition pos: (x: Int, y: Int)) {
+        UIView.animate(withDuration: 2, delay: 0, options: [.curveLinear], animations: {
+            view.frame = CGRect(x: pos.x, y: pos.y, width: 32, height: 32)
+        }, completion: nil)
+    }
+
+    
     // MARK: - Selector methods
     
     @objc private func backAction() {
-        spiders = []
+        
+        spiders = [:]
         DataManager.instance.spiderColor = nil
         
         navigationController?.popViewController(animated: true)
@@ -143,30 +158,15 @@ class MainViewController: UIViewController {
     }
     
     @objc private func bornAction() {
-        guard let color = DataManager.instance.spiderColor else {
-            
-            let settingsViewController = SettingsViewController()
-            
-            settingsViewController.warningAction = { [weak self] in
-                guard let strongSelf = self else { return }
-                
-                let alert = UIAlertController(title: "", message: "Select spider", preferredStyle: UIAlertControllerStyle.alert)
-                
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                
-                strongSelf.present(alert, animated: true, completion: nil)
-            }
-            
-            navigationController?.pushViewController(settingsViewController, animated: true)
-            return
-        }
+        let color = DataManager.instance.spiderColor != nil ? DataManager.instance.spiderColor! : UIColor.black
         
-        let position = Utils.randomPosition(forView: self.view)
+        let position = (x: Int(self.view.frame.minX - 96), y: Int(self.view.frame.minY - 96))
         let spider = Spider(color: color, position: position)
         
-        self.spiders.append(spider)
-        
-//        NotificationCenter.default.post(name: .spiderBorned, object: nil)
-        
+        let frame = CGRect(x: position.x, y: position.y, width: 128, height: 128)
+        let spiderView = SpiderView(frame: frame, withColor: color)
+
+        self.view.addSubview(spiderView)
+        spiders[spider.id] = spiderView
     }
 }

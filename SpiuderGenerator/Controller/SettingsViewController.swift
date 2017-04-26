@@ -9,8 +9,6 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
-    var warningAction: (() -> Void)?
     
     fileprivate var selectedColor = DataManager.instance.spiderColor != nil ? DataManager.instance.spiderColor! : UIColor.black
     
@@ -51,17 +49,10 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        showWarning()
-        
-        setupViews()    }
+        setupViews()
+    }
     
     // MARK: - Private methods
-    
-    private func showWarning() {
-        
-        warningAction?()
-        warningAction = nil
-    }
     
     private func setupViews() {
         self.view.backgroundColor = UIColor.lightGray
