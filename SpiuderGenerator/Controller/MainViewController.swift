@@ -75,6 +75,14 @@ class MainViewController: UIViewController {
         setupViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        for spiderView in spiders.values {
+            spiderView.shakeAnimation()
+        }
+    }
+    
     // MARK: - Private functions
     
     private func setupViews() {

@@ -26,7 +26,6 @@ class SpiderView: UIView {
         let image = UIImage(named: "spider.png")?.image(withColor: color)
         spiderImageView.image = image
         
-        
         super.init(frame: frame)
         
         addSubview(spiderImageView)
@@ -38,12 +37,13 @@ class SpiderView: UIView {
     }
     
     // MARK: - Private functions
-    private func shakeAnimation() {
-        self.spiderImageView.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 4))
+    
+     func shakeAnimation() {
+        self.spiderImageView.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi / 6))
         self.spiderImageView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         
-        UIView.animate(withDuration: 0.3, delay: 0, options: [.repeat, .autoreverse], animations: {
-            self.spiderImageView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi / 4))
+        UIView.animate(withDuration: 0.2, delay: 0, options: [.repeat, .autoreverse], animations: {
+            self.spiderImageView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi / 6))
         }, completion: nil)
     }
     
