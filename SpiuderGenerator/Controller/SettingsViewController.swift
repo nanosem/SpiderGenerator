@@ -10,11 +10,11 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    fileprivate var selectedColor = DataManager.instance.spiderColor != nil ? DataManager.instance.spiderColor! : UIColor.black
+    fileprivate var selectedColor = DataManager.instance.spiderColor ?? UIColor.black
     
     // MARK: - Private view elements
     
-    private lazy var navContainerView: UIView = {
+    private var navContainerView: UIView = {
         let view = UIView()
         
         view.backgroundColor = UIColor.clear
@@ -32,10 +32,10 @@ class SettingsViewController: UIViewController {
         return buttonView
     }()
     
-    fileprivate lazy var spiderIcon: UIImageView = {
+    fileprivate  var spiderIcon: UIImageView = {
         let spiderIcon = UIImageView()
         
-        let color = DataManager.instance.spiderColor != nil ? DataManager.instance.spiderColor! : UIColor.black
+        let color = DataManager.instance.spiderColor ?? UIColor.black
         
         spiderIcon.image = UIImage(named: "spider.png")?.image(withColor: color)
         
@@ -112,8 +112,13 @@ class SettingsViewController: UIViewController {
 
 extension SettingsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     fileprivate func setupSpiderCollection() {
+        // TODO: Need to refactor
+        
         let x = 0
         let y = 72
+        
+        spiderCollection.translatesAutoresizingMaskIntoConstraints = false
+        spiderCollection.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         
         let width = Int(self.view.frame.width)
         let height = Int(self.view.frame.height - 64)

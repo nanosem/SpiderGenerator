@@ -25,6 +25,8 @@
 		C199C2D11EAF77E6002F62A7 /* Spider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C199C2D01EAF77E6002F62A7 /* Spider.swift */; };
 		C199C2D31EAF97B0002F62A7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C199C2D21EAF97B0002F62A7 /* DataManager.swift */; };
 		C199C2DB1EAFAAB8002F62A7 /* SpiderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C199C2DA1EAFAAB8002F62A7 /* SpiderViewCell.swift */; };
+		C19EF5321EB2436A0086177E /* NibName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19EF5311EB2436A0086177E /* NibName.swift */; };
+		C19EF5341EB2439A0086177E /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19EF5331EB2439A0086177E /* Identifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		C199C2D01EAF77E6002F62A7 /* Spider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spider.swift; sourceTree = "<group>"; };
 		C199C2D21EAF97B0002F62A7 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		C199C2DA1EAFAAB8002F62A7 /* SpiderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpiderViewCell.swift; sourceTree = "<group>"; };
+		C19EF5311EB2436A0086177E /* NibName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibName.swift; sourceTree = "<group>"; };
+		C19EF5331EB2439A0086177E /* Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 			children = (
 				C199C2D01EAF77E6002F62A7 /* Spider.swift */,
 				C199C2D21EAF97B0002F62A7 /* DataManager.swift */,
+				C19EF5311EB2436A0086177E /* NibName.swift */,
+				C19EF5331EB2439A0086177E /* Identifier.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,8 +263,10 @@
 				C199C2CF1EAF74A3002F62A7 /* UIImage+Extension.swift in Sources */,
 				C199C2DB1EAFAAB8002F62A7 /* SpiderViewCell.swift in Sources */,
 				C17BD2791EB0AD3200C1DB5D /* Utils.swift in Sources */,
+				C19EF5321EB2436A0086177E /* NibName.swift in Sources */,
 				C199C2D11EAF77E6002F62A7 /* Spider.swift in Sources */,
 				C117AE8C1EAE592500D6D79A /* InitialViewController.swift in Sources */,
+				C19EF5341EB2439A0086177E /* Identifier.swift in Sources */,
 				C117AE901EAE595A00D6D79A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

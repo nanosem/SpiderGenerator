@@ -146,7 +146,6 @@ class MainViewController: UIViewController {
     // MARK: - Selector methods
     
     @objc private func backAction() {
-        
         spiders = [:]
         DataManager.instance.spiderColor = nil
         

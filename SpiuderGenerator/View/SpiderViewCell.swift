@@ -8,13 +8,7 @@
 
 import UIKit
 
-class SpiderViewCell: UICollectionViewCell {
-
-    
-    // MARK: - Assisting properties
-
-    static let nibName = UINib(nibName: "\(SpiderViewCell.self)", bundle: nil)
-    static let identifier = "\(SpiderViewCell.self)"
+class SpiderViewCell: UICollectionViewCell, NibName, Identifier {
     
     // MARK: - Private properties
     
